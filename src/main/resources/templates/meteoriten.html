@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -44,7 +44,7 @@
         Klein- / Großschreibung ist egal
     </p>
     
-    <p id="schiffpower">deine Schiffspower: 100%</p>
+    <p id="schiffpower" th:text="Deine Schiffspower: ${schiffpower} Prozent"></p>
 	
     <p id="meteorit" class="blau">
         Rot

@@ -11,6 +11,4 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 public class SchiffDTO {
     private int power=100;
-
-
 }
