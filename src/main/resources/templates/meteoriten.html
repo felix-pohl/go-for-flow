@@ -46,8 +46,7 @@
     
     <p id="schiffpower" th:text="'Deine Schiffspower: ' + ${schiffpower} + ' Prozent'"></p>
 
-    <p id="meteorit" class="blau">
-        Rot
+    <p id="meteorit" th:class="${textfarbe}" th:text="${farbwort}">
     </p>
 
     <form method="Post">
@@ -55,6 +54,7 @@
         <input type="text"
                name="meteoriten_farbe">
         <button>Ausweichen!</button>
+        <input type="hidden" name="farbwort" th:value="${farbwort}">
     </form>
     
 </body>
