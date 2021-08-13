@@ -25,12 +25,13 @@ public class MeteoritenGame {
     public ModelAndView meteoriten(){
         ModelAndView mav = new ModelAndView("meteoriten");
         addModelObjects(mav);
+        mav.addObject("runden", 3);
         return mav;
     }
 
     @PostMapping("meteoriten")
     public ModelAndView meteoritenAuswichen(@RequestParam("meteoriten_farbe") String meteoritenFarbe,
-                                            @RequestParam("farbwort") String farbwort) {
+                                            @RequestParam("farbwort") String farbwort, @RequestParam("runden") int runden) {
         ModelAndView mav = new ModelAndView("meteoriten");
         System.out.print(meteoritenFarbe);
         System.out.print(farbwort);
@@ -38,6 +39,11 @@ public class MeteoritenGame {
             schiff.substractPower(10);    
         } 
         addModelObjects(mav);
+        var verbleibendeRunden = runden - 1;
+        if(verbleibendeRunden == 0){
+           return new ModelAndView("kraken");
+        }
+        mav.addObject("runden", verbleibendeRunden);
         return mav;
     }
 
