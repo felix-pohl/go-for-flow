@@ -1,12 +1,13 @@
 package com.example.demo.Controller;
 
+import com.example.demo.MeteorDTO;
 import com.example.demo.SchiffDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -27,10 +28,9 @@ public class MeteoritenGame {
     }
 
     @PostMapping("meteoriten")
-    public ModelAndView meteoritenAuswichen(@RequestBody String request) {
-        System.out.print(request);
+    public ModelAndView meteoritenAuswichen(@RequestParam("meteoriten_farbe") String meteoritenFarbe) {
+        System.out.print(meteoritenFarbe);
         
-
         return null;
     }
 }
