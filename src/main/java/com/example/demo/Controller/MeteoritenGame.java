@@ -5,6 +5,8 @@ import com.example.demo.SchiffDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -22,5 +24,13 @@ public class MeteoritenGame {
         ModelAndView mav = new ModelAndView("meteoriten");
         mav.addObject("schiffpower", schiff.getPower());
         return mav;
+    }
+
+    @PostMapping("meteoriten")
+    public ModelAndView meteoritenAuswichen(@RequestBody String request) {
+        System.out.print(request);
+        
+
+        return null;
     }
 }
