@@ -1,5 +1,6 @@
 package com.example.demo.Controller;
 
+import com.example.demo.FarbGenerator;
 import com.example.demo.MeteorDTO;
 import com.example.demo.SchiffDTO;
 
@@ -23,9 +24,7 @@ public class MeteoritenGame {
     @GetMapping("meteoriten")
     public ModelAndView meteoriten(){
         ModelAndView mav = new ModelAndView("meteoriten");
-        mav.addObject("schiffpower", schiff.getPower());
-        mav.addObject("textfarbe", "rot");
-        mav.addObject("farbwort", "blau");
+        addModelObjects(mav);
         return mav;
     }
 
@@ -38,9 +37,14 @@ public class MeteoritenGame {
         if(!meteoritenFarbe.equals(farbwort)) {
             schiff.substractPower(10);    
         } 
-        mav.addObject("textfarbe", "gruen");
-        mav.addObject("farbwort", "orange");
-        mav.addObject("schiffpower", schiff.getPower());
+        addModelObjects(mav);
         return mav;
     }
+
+    private void addModelObjects(ModelAndView mav) {
+        mav.addObject("schiffpower", schiff.getPower());
+        mav.addObject("textfarbe", FarbGenerator.farbeGenerieren());
+        mav.addObject("farbwort", FarbGenerator.farbeGenerieren());
+    }
+
 }
