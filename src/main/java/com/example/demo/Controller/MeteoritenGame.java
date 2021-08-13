@@ -36,10 +36,11 @@ public class MeteoritenGame {
         System.out.print(meteoritenFarbe);
         System.out.print(farbwort);
         if(!meteoritenFarbe.equals(farbwort)) {
-            schiff.setPower(schiff.getPower()-10);
-            mav.addObject("schiffpower", schiff.getPower());
-        }
-
+            schiff.substractPower(10);    
+        } 
+        mav.addObject("textfarbe", "gruen");
+        mav.addObject("farbwort", "orange");
+        mav.addObject("schiffpower", schiff.getPower());
         return mav;
     }
 }

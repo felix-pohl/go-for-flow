@@ -13,4 +13,11 @@ public class SchiffDTO {
     public void setPower(int power) {
         this.power = power;
     }
+    public void substractPower(int damage) {
+        this.power -= damage;
+    }
+    public void addPower(int more) {
+        this.power -= more;
+    }
+    
 }
