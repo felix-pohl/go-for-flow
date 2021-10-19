@@ -1,7 +1,7 @@
 package com.example.demo.Controller;
 
 import com.example.demo.FarbGenerator;
-import com.example.demo.MeteorDTO;
+//import com.example.demo.MeteorDTO;
 import com.example.demo.SchiffDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
