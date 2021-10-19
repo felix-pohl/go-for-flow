@@ -19,6 +19,13 @@
   Ihr eilt den K-Taxianern zur Hilfe, da es das Protokoll der Föderation der Agilisten so vorschreibt.<br>
   <a href="meteoriten">Ihr ignoriert das Signal und tut so, als ob ihr das gar nicht mit bekommen habt, denn ihr habt ja eine Hauptmission.</a>
 
+  <form id="saveForm" method="POST" action="/game/save">
+    <input type="text" name="email"/>
+    <input type="hidden" name="power" value="100" />
+    <input type="hidden" name="historie" id="historie"/>
+    <button onClick="speichern()">speichern</button>
+  </form>
+
 
 </p>
 

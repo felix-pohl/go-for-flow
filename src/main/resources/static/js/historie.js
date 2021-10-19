@@ -21,3 +21,11 @@ function speichereSchritt(schritt) {
     historie.schritte.push(schritt);
     speichereHistorie(historie);
 }
+
+function speichern(){
+    let historie = ladeHistorie();
+    let input = document.getElementById("historie");
+    input.value = JSON.stringify(historie);
+    let form = document.getElementById("saveForm");
+    form.submit();
+}
