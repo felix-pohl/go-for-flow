@@ -1,0 +1,33 @@
+body {
+    background-image: url('assets/images/background.jpg');
+    background-attachment: fixed;
+    color: white;
+}
+
+
+
+.storyBox{
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid black;
+    background-color: black;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+.storyBox p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.storyBox a {
+    color: yellow;
+}
+
+.title {
+    color: yellow;
+    font-size: x-large;
+}
+
