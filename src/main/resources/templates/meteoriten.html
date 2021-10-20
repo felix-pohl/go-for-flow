@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Meteoriten</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
     <style>.rot {color:red} 
     	.blau {color:blue}
     	.gruen {color:green}
@@ -15,7 +16,12 @@
 </head>
 
 <body>
-	
+    <div class="storyBox">
+        <p class="title">
+            USS BRANDAD auf Reisen
+        </p>
+    </div>
+	<div class="storyBox">
     <p id="5">
         Ihr gerät in einen Metereoiden Schauer, durch welchen ihr durch navigiert:
         <br>
@@ -44,14 +50,15 @@
         Die Wortfarbe und das Farbwort dürfen auch mal das gleiche sein ;-)
         Klein- / Großschreibung ist egal
     </p>
-    
+</div>
+<div class="storyBox">
     <p th:text="'Runden verbleibend: ' + ${runden}"></p>
 
     <p id="schiffpower" th:text="'Deine Schiffspower: ' + ${schiffpower} + ' Prozent'"></p>
 
     <p id="meteorit" th:class="${textfarbe}" th:text="${farbwort}">
     </p>
-
+<p>
     <form method="Post">
         <label for="meteoriten_farbe">Farbe des Meteoriten:</label>
         <input type="text"
@@ -60,7 +67,8 @@
         <input type="hidden" name="farbwort" th:value="${farbwort}">
         <input type="hidden" name="runden" th:value="${runden}">
     </form>
-    
+</p>
+</div>
 </body>
 
 <script>
