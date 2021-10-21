@@ -14,6 +14,12 @@
   </p>
 </div>
 
-<div class="gameBox">
-  <button>Ausweichen!</button>
+<div class="gameBox" *ngIf="!isStarted; else meteoritenGame">
+  <button (click)="start()">Ausweichen!</button>
 </div>
+
+<ng-template class="gameBox" #meteoritenGame>
+  <div class="gameBox" *ngIf="meteorit">
+    <div class="meteorit" [ngClass]="meteorit.color">{{meteorit.text}}</div>
+  </div>
+</ng-template>

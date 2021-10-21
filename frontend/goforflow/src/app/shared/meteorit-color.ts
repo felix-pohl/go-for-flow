@@ -1,4 +1,4 @@
-enum MeteoritenColor {
+export enum MeteoritenColor {
   ROT = 'rot',
   GELB = 'gelb',
   GRÜN = 'grün',
