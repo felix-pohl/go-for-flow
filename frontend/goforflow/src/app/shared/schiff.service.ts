@@ -10,10 +10,17 @@ export class SchiffService {
 
   constructor() { }
 
-  getSchiff(): Schiff{
-    const schiff: Schiff = {power: 100};
-    this.schiff = schiff;
-    return schiff; 
+  getSchiff(): Schiff {
+    if (!this.schiff) {
+      this.schiff =  {power: 100};
+    }
+    return this.schiff;
+  }
+
+  treffer(schaden: number): Schiff {
+    this.getSchiff().power -= schaden;
+
+    return this.schiff;
   }
 
 }

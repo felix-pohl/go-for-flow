@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IntroComponent } from './pages/intro/intro.component';
 import { SosComponent } from './pages/sos/sos.component';
-import { MeteoritenComponent } from './meteoriten/meteoriten.component';
+import { MeteoritenComponent } from './pages/meteoriten/meteoriten.component';
 
 @NgModule({
   declarations: [
